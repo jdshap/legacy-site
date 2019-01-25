@@ -1,0 +1,65 @@
+$font-stack: Helvetica, sans-serif;
+$silver: #f0f0f0;
+$steel: #616161;
+$raspberry: #c72c68;
+$seafoam: #3ccd96;
+
+* {
+	position: relative;
+	box-sizing: inherit;
+	max-width: 100%;
+}
+
+:root {
+	width: 100vw - #{100px};
+}
+
+body {
+	all: unset;
+	width: 100%;
+	font: 100% $font-stack;
+	color: $steel;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	padding: .5em 1em;
+}
+
+.projects {
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.projects__card {
+	flex-basis: 400px;
+	max-width: 400px;
+	height: 150px;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 0px 2px 4px $steel;
+}
+
+.projects__card:hover {
+	box-shadow: 0px 4px 8px $steel;
+}
+
+.projects__card--featured {
+	border: 2px solid $raspberry;
+	order: -1;
+	h2 {
+		color: $raspberry;
+	}
+}
+
+a {
+	all: unset;
+}
+
+@media screen and (max-width: 800px) {
+	* {
+		width: 100%;
+	}
+}
