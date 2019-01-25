@@ -24,13 +24,13 @@ body {
 .projects {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .projects__card {
+  align-self: flex-start;
   flex-basis: 400px;
   max-width: 400px;
-  height: 150px;
   margin: 20px;
   padding: 20px;
   box-shadow: 0px 2px 4px #616161;
@@ -42,7 +42,8 @@ body {
 
 .projects__card--featured {
   border: 2px solid #c72c68;
-  order: -1;
+  background-image: url("./resources/featured.png");
+  background-repeat: no-repeat;
 }
 .projects__card--featured h2 {
   color: #c72c68;
@@ -55,6 +56,10 @@ a {
 @media screen and (max-width: 800px) {
   * {
     width: 100%;
+  }
+
+  .projects {
+    justify-content: center;
   }
 }
 
