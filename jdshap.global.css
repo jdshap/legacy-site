@@ -35,12 +35,21 @@ body {
   padding: 20px;
   box-shadow: 0px 2px 4px #616161;
 }
+.projects__card h2 {
+  margin-bottom: 5px;
+}
+.projects__card div {
+  padding-top: 15px;
+  padding-left: 20px;
+  border-left: 2px solid #3ccd96;
+}
 
 .projects__card:hover {
   box-shadow: 0px 4px 8px #616161;
 }
 
 .projects__card--featured {
+  order: -1;
   border: 2px solid #c72c68;
   background-image: url("./resources/featured.png");
   background-repeat: no-repeat;

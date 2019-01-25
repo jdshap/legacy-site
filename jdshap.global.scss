@@ -40,6 +40,14 @@ body {
 	margin: 20px;
 	padding: 20px;
 	box-shadow: 0px 2px 4px $steel;
+	h2 {
+		margin-bottom: 5px;
+	}
+	div {
+		padding-top: 15px;
+		padding-left: 20px;
+		border-left: 2px solid $seafoam;
+	}
 }
 
 .projects__card:hover {
@@ -47,6 +55,7 @@ body {
 }
 
 .projects__card--featured {
+	order: -1;
 	border: 2px solid $raspberry;
 	background-image: url("./resources/featured.png");
 	background-repeat: no-repeat;
