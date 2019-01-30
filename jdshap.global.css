@@ -97,6 +97,10 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  .titlebar h1 {
+    margin-left: 20px;
+  }
+
   .projects {
     justify-content: center;
     font-size: 80%;
