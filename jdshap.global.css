@@ -101,6 +101,10 @@ a {
     margin-left: 20px;
   }
 
+  .titlebar__background {
+    height: 140px;
+  }
+
   .projects {
     justify-content: center;
     font-size: 80%;
