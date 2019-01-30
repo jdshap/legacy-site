@@ -10,6 +10,7 @@
 
 body {
   all: unset;
+  height: 100%;
   width: 100%;
   font: 100% Helvetica, sans-serif;
   color: #616161;
@@ -21,10 +22,51 @@ body {
   padding: 0.5em 1em;
 }
 
+.tb2 {
+  position: absolute;
+  left: -20%;
+  right: 0;
+  top: -40px;
+  bottom: 0;
+  height: 100px;
+  transform: skewY(-4deg);
+  background-color: #f0f0f0;
+}
+
+.titlebar {
+  margin-bottom: 5vw;
+}
+.titlebar h1 {
+  margin: 30px;
+  margin-left: 30px;
+  color: white;
+}
+
+.titlebar__background {
+  position: absolute;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: -100px;
+  bottom: 0px;
+  z-index: -3;
+}
+
+.titlebar__background--raspberry {
+  background-color: #c72c68;
+  transform: skewY(-4deg);
+}
+
+.titlebar__background--silver {
+  background-color: #f0f0f0;
+  transform: skewY(-6.2deg);
+}
+
 .projects {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  border-top: 2px solid #f0f0f0;
 }
 
 .projects__card {
@@ -32,7 +74,8 @@ body {
   flex-basis: 400px;
   max-width: 400px;
   margin: 20px;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 10px;
   box-shadow: 0px 2px 4px #616161;
 }
 .projects__card h2 {
@@ -69,6 +112,7 @@ a {
 
   .projects {
     justify-content: center;
+    font-size: 80%;
   }
 }
 
