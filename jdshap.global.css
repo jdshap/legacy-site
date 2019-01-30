@@ -97,10 +97,6 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-  * {
-    width: 100%;
-  }
-
   .projects {
     justify-content: center;
     font-size: 80%;
