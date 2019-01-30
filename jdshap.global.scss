@@ -29,6 +29,7 @@ body {
 }
 
 .titlebar {
+	margin: 0;
 	margin-bottom: 5vw;
 	h1 {
 		margin: 30px;
@@ -38,6 +39,7 @@ body {
 }
 
 .titlebar__background {
+	margin: 0;
 	position: absolute;
 	height: 130px;
     left:0;right:0;top:-100px;bottom:0px;
