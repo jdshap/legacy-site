@@ -16,8 +16,35 @@
 			<h1>Joseph Shapiro</h1>
 		</div>
 		<div class=container>
-			<!--<a href="./resources/Resume.pdf" target="_blank" class="">Resume</a>-->
-			<h1>Projects</h1>
+			<!--<a href="./resources/Resume.pdf" target="_blank" class="">Resume</a>
+			<p>
+				General Skills<br>
+				<br>
+				Languages: Java, Javascript, HTML, CSS, Bash, Git<br>
+				JS Frameworks: Angular 2, Electron<br>
+				IDEs: Eclipse, IntelliJ, NetBeans<br>
+				<br>
+				Education<br>
+				<br>
+				Bloomsburg University: Currently pursuing BS in Computer Science<br>
+				Involvement in: Honors program, Board of Governors Scholarship program<br>
+				Applicable Coursework: Object Oriented Programming, Graphic Interfaces in Java, Intro to Javascript, Web Programming, Public Speaking<br>
+				<br>
+				Work Experience<br>
+				<br>
+				R&S Keystone Diner: Dishwasher<br>
+				Skills Acquired: Ability to work in a fast-paced environment, collaboration and organization of tasks within a team, strong sense of self-motivation without supervision<br>
+				Pet Supplies Plus: Sales Associate, Cashier<br>
+				Skills Acquired: Interpersonal communication, Problem solving using available resources<br>
+			</p>-->
+		</div>
+		<div class="section-bar">
+			<h2 class="section-bar__header" onclick="activateSection(0)">Software</h2>
+			<h2 class="section-bar__header" onclick="activateSection(1)">Graphics</h2>
+			<h2 class="section-bar__header" onclick="activateSection(2)">Placeholder</h2>
+			<div class="triangle"></div>
+		</div>
+		<div class=container>
 			<div class="projects">
 				<a href="https://github.com/jdshap/jdshap.github.io" class="projects__card">
 					<h2>jdshap.github.io</h2>
@@ -41,5 +68,27 @@
 				</a>
 			</div>
 		</div>
+		<div class="graphics">Graphics</div>
+		<div class="placeholder">Placeholder</div>
 	</body>
+	
+	<script>
+		activateSection(0);
+	
+		function activateSection(n) {
+			var headers = document.getElementsByClassName("section-bar__header");
+			var sections = ["projects", "graphics", "placeholder"];
+			var i;
+			
+			for(i = 0; i < headers.length; i++) {
+				headers[i].classList.remove("section-bar__header--active");
+			}
+			headers[n].classList.add("section-bar__header--active");
+			
+			for(i = 0; i < sections.length; i++) {
+				document.getElementsByClassName(sections[i])[0].style.display = "none";
+			}
+			document.getElementsByClassName(sections[n])[0].style.display = "flex";
+		}
+	</script>
 </html>
