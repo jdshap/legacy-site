@@ -127,7 +127,12 @@ a {
 
 @media screen and (max-width: 800px) {
   body {
-    font-size: 80%;
+    font-size: 10px;
+  }
+
+  .section-bar__header {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .titlebar h1 {
