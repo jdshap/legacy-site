@@ -67,13 +67,26 @@
 					<div>A functional Telegram bot written in Java, with DOM queries via Jsoup</div>
 				</a>
 			</div>
+			<div class="graphics">
+				
+			</div>
+			<div class="placeholder">Placeholder</div>
 		</div>
-		<div class="graphics">Graphics</div>
-		<div class="placeholder">Placeholder</div>
 	</body>
 	
 	<script>
 		activateSection(0);
+		
+		const imagesPath = './resources/gd/';
+		const graphics = document.getElementsByClassName("graphics")[0];
+		var files = ["Blade2.png", "BladeVector.png", "Blade v1.png", "Artboard 1.png", "Core.png", "BloomShirt.png", "BloomBottle.png",
+			"GCNlib.png", "icos.gif", "Pertussis.png", "RaizexCharged.png"];
+		
+		files.forEach(function(file) {
+			graphics.innerHTML += `<div class="graphics__image">
+				<img src="./resources/gd/${file}" height="300">
+			</div>`;
+		});
 	
 		function activateSection(n) {
 			var headers = document.getElementsByClassName("section-bar__header");
