@@ -73,35 +73,6 @@
 			<div class="placeholder">Placeholder</div>
 		</div>
 	</body>
-	
-	<script>
-		activateSection(0);
-		
-		const imagesPath = './resources/gd/';
-		const graphics = document.getElementsByClassName("graphics")[0];
-		var files = ["Blade2.png", "BladeVector.png", "Blade v1.png", "Artboard 1.png", "Core.png", "BloomShirt.png", "BloomBottle.png",
-			"GCNlib.png", "icos.gif", "Pertussis.png", "RaizexCharged.png"];
-		
-		files.forEach(function(file) {
-			graphics.innerHTML += `<div class="graphics__image">
-				<img src="./resources/gd/${file}" height="300">
-			</div>`;
-		});
-	
-		function activateSection(n) {
-			var headers = document.getElementsByClassName("section-bar__header");
-			var sections = ["projects", "graphics", "placeholder"];
-			var i;
-			
-			for(i = 0; i < headers.length; i++) {
-				headers[i].classList.remove("section-bar__header--active");
-			}
-			headers[n].classList.add("section-bar__header--active");
-			
-			for(i = 0; i < sections.length; i++) {
-				document.getElementsByClassName(sections[i])[0].style.display = "none";
-			}
-			document.getElementsByClassName(sections[n])[0].style.display = "flex";
-		}
-	</script>
+	<script src="sections.js"></script>
+	<script src="graphics.js"></script>
 </html>

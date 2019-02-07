@@ -80,6 +80,7 @@ body {
 	padding-bottom: 20px;
 	color: white;
 	cursor: pointer;
+	transition: background-color 250ms;
 }
 
 .section-bar__header:hover {
@@ -112,6 +113,7 @@ body {
 	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 0px 2px 5px $steel;
+	transition: box-shadow 250ms;
 	h2 {
 		margin-bottom: 5px;
 	}
@@ -146,6 +148,30 @@ body {
 	padding: 0px;
 	border-radius: 10px;
 	box-shadow: 0px 2px 5px $steel;
+	background-color: $silver;
+	transition: background-color 500ms;
+	img {
+		transition: filter 500ms;
+	}
+}
+
+.graphics__info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: transparent;
+	transition: color 500ms;
+}
+
+.graphics__image:hover {
+	background-color: $steel;
+	img {
+		filter: blur(5px) brightness(50%);
+	}
+	.graphics__info {
+		color: white;
+	}
 }
 
 a {
