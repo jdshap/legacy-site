@@ -2,7 +2,7 @@ activateSection(0);
 	
 function activateSection(n) {
 	var headers = document.getElementsByClassName("section-bar__header");
-	var sections = ["projects", "graphics", "placeholder"];
+	var sections = ["projects", "graphics", "widgets"];
 	var i;
 	
 	for(i = 0; i < headers.length; i++) {

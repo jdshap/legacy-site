@@ -47,7 +47,7 @@ var files = [
 	}
 ];
 
-files.forEach(function(file) {
+files.forEach(file => {
 	graphics.innerHTML += `<div class="graphics__image">
 		<img src="./resources/gd/${file.path}" height="300">
 		<div class="graphics__info">

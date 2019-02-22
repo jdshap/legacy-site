@@ -95,7 +95,7 @@ body {
 }
 
 .projects {
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .graphics {
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   justify-content: center;
 }
@@ -169,8 +169,52 @@ body {
   color: white;
 }
 
+.widgets {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.widgets__leaderboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 480px;
+  flex-basis: 250px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #616161;
+}
+.widgets__leaderboard #scores {
+  height: 400px;
+  width: 100%;
+  margin: 0;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+.widgets__leaderboard #scores div:first-of-type {
+  border-top: unset;
+  font-weight: bold;
+}
+.widgets__leaderboard #scores div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+.widgets__leaderboard #scores .score {
+  float: right;
+}
+
 a {
   all: unset;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #f0f0f0;
 }
 
 @media screen and (max-width: 800px) {

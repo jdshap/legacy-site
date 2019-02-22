@@ -41,7 +41,7 @@
 		<div class="section-bar">
 			<h2 class="section-bar__header" onclick="activateSection(0)">Software</h2>
 			<h2 class="section-bar__header" onclick="activateSection(1)">Graphics</h2>
-			<h2 class="section-bar__header" onclick="activateSection(2)">Placeholder</h2>
+			<h2 class="section-bar__header" onclick="activateSection(2)">Widgets</h2>
 			<div class="triangle"></div>
 		</div>
 		<div class=container>
@@ -70,15 +70,21 @@
 			<div class="graphics">
 				
 			</div>
-			<div class="placeholder">
-				<button onclick="postData()">Add Score</button>
+			<div class="widgets">
+				<div class="widgets__leaderboard">
+					<div id="scores">
+						
+					</div>
+					<button onclick="lb_postData()">Random Score</button>
+					<button onclick="lb_deleteData(0)">Delete Score 0</button>
+				</div>
 			</div>
 		</div>
 	</body>
 	<script src="faker.js"></script>
 	<script src="fetch_mock.js"></script>
-	<script src="fetch.js"></script>
 	<script src="sections.js"></script>
 	<script src="graphics.js"></script>
+	<script src="servermock.js"></script>
 	<script src="leaderboard.js"></script>
 </html>
