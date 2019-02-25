@@ -2,6 +2,7 @@ var board = [];
 var currentSelection;
 
 const scoreboard = document.getElementById("scores");
+var players;
 
 lb_getData();
 
@@ -12,7 +13,7 @@ function lb_getData() {
 			scoreboard.innerHTML += `<div class="player" id="pl${score.id}">${score.name} <span class="score">${score.score}</span></div>`;
 		});
 		
-		var players = document.getElementsByClassName("player");
+		players = document.getElementsByClassName("player");
 		[...players].forEach(player => {
 			player.addEventListener("click", e => {selectItem(e.target)});
 		});
@@ -21,6 +22,8 @@ function lb_getData() {
 
 function selectItem(element) {
 	currentSelection=parseInt(element.id.substr(2));
+	[...players].forEach(player => { player.classList.remove("selected") });
+	element.classList.add("selected");
 }
 
 function lb_postData() {

@@ -204,6 +204,20 @@ body {
   padding-bottom: 10px;
   border-top: 1px solid #f0f0f0;
 }
+.widgets__leaderboard #scores div:hover {
+  background-color: #f0f0f0;
+}
+.widgets__leaderboard #scores .selected:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #3ccd96;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  left: -15px;
+}
 .widgets__leaderboard #scores .score {
   float: right;
 }
