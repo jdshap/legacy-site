@@ -203,6 +203,10 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   border-top: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+.widgets__leaderboard #scores div * {
+  pointer-events: none;
 }
 .widgets__leaderboard #scores div:hover {
   background-color: #f0f0f0;

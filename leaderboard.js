@@ -15,7 +15,9 @@ function lb_getData() {
 		
 		players = document.getElementsByClassName("player");
 		[...players].forEach(player => {
-			player.addEventListener("click", e => {selectItem(e.target)});
+			player.addEventListener("click", e => {
+				selectItem(e.target);
+			}, true);
 		});
 	});
 }
