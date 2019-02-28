@@ -214,6 +214,27 @@ body {
 		div:hover {
 			background-color: $silver;
 		}
+		.selected {
+			input {
+				padding: 3px;
+				border: 2px solid $raspberry;
+				border-radius: 20px;
+				outline: none;
+				transition: .2s;
+			}
+			input:focus {
+				border: 2px solid $seafoam;
+			}
+			:first-child {
+				width: 70%;
+			}
+			:last-child {
+				width: 20%;
+			}
+			* {
+				pointer-events: unset;
+			}
+		}
 		.selected:before {
 			content: "";
 			display: block;

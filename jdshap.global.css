@@ -211,6 +211,25 @@ body {
 .widgets__leaderboard #scores div:hover {
   background-color: #f0f0f0;
 }
+.widgets__leaderboard #scores .selected input {
+  padding: 3px;
+  border: 2px solid #c72c68;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.2s;
+}
+.widgets__leaderboard #scores .selected input:focus {
+  border: 2px solid #3ccd96;
+}
+.widgets__leaderboard #scores .selected :first-child {
+  width: 70%;
+}
+.widgets__leaderboard #scores .selected :last-child {
+  width: 20%;
+}
+.widgets__leaderboard #scores .selected * {
+  pointer-events: unset;
+}
 .widgets__leaderboard #scores .selected:before {
   content: "";
   display: block;
