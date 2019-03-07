@@ -28,25 +28,29 @@ function selectItem(event) {
 	currentSelection=parseInt(element.id.substr(2));
 	try {
 		var oldSelection = document.getElementsByClassName("selected")[0]
-		var oldHtml = oldSelection.innerHTML;
 		var oldName = oldSelection.getAttribute("data-name");
 		var oldScore = oldSelection.getAttribute("data-score");
 		oldSelection.addEventListener("click", selectItem);
+		lb_putData(parseInt(oldSelection.id.substr(2)));
 		document.getElementsByClassName("selected")[0].innerHTML =  `<span>${oldName}</span>
 		<span class="score">${oldScore}</span>`;
 	} catch(err) {}
 	[...players].forEach(player => { player.classList.remove("selected") });
 	element.classList.add("selected");
-	var html = element.innerHTML;
 	var name = element.getAttribute("data-name");
 	var score = element.getAttribute("data-score");
-	element.innerHTML = `<input type="text" name="name" value="${name}"></input>
-		<input class="score" type="text" name="score" value="${score}"></input>`;
+	element.innerHTML = `<input type="text" id="name" value="${name}"></input>
+		<input class="score" type="text" id="score" value="${score}"></input>`;
 	element.removeEventListener("click", selectItem);
 }
 
 function lb_postData() {
 	fetch('http://jdshap.github.io/leaderboard', {method: "POST", body: {name: faker.internet.userName(), score: faker.random.number({min:0, max:8000})}})
+	.then(lb_getData());
+}
+
+function lb_putData(id) {
+	fetch('http://jdshap.github.io/leaderboard', {method: "PUT", body: {id: id, name: document.getElementById("name").value, score: document.getElementById('score').value}})
 	.then(lb_getData());
 }
 

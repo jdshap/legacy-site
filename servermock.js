@@ -26,6 +26,20 @@ fetch_mock
 		}
 		return 200;
 	})
+	.put('http://jdshap.github.io/leaderboard', function postScore(url, data) {
+		try {
+			data.body.id === 0 && data.body.score === 0;
+		} catch(err) {
+			return 400;
+		}
+		var temp = JSON.parse(JSON.stringify(leaderboard));
+		leaderboard.length = 0;
+		temp.map(function(obj) {
+			if(obj.id !== data.body.id) leaderboard.push(obj)
+				else leaderboard.push({...data.body});
+		}, []);
+		return 200;
+	})
 	.delete('http://jdshap.github.io/leaderboard', function rmScore(url, data) {
 		try {
 			data.body.id === 0;
